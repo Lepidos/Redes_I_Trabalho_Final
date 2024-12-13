@@ -1,14 +1,20 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <scenario>
   <networks>
-    <network id="6" name="n6" icon="" canvas="1" type="SWITCH">
-      <position x="51.0" y="480.0" lat="47.574803193924936" lon="-122.13163700755763" alt="2.0"/>
+    <network id="6" name="sA" icon="" canvas="1" type="SWITCH">
+      <position x="46.0" y="376.0" lat="47.57574858877238" lon="-122.13170438120393" alt="2.0"/>
     </network>
-    <network id="7" name="n7" icon="" canvas="1" type="SWITCH">
+    <network id="7" name="sB" icon="" canvas="1" type="SWITCH">
       <position x="364.0" y="796.0" lat="47.571930543320214" lon="-122.12741941729868" alt="2.0"/>
     </network>
-    <network id="10" name="n10" icon="" canvas="1" type="SWITCH">
+    <network id="10" name="sC" icon="" canvas="1" type="SWITCH">
       <position x="930.0" y="794.0" lat="47.57194872514868" lon="-122.11979272053652" alt="2.0"/>
+    </network>
+    <network id="12" name="sD" icon="" canvas="1" type="SWITCH">
+      <position x="1245.0" y="377.0" lat="47.57573949851857" lon="-122.11554818081905" alt="2.0"/>
+    </network>
+    <network id="14" name="n14" icon="" canvas="1" type="SWITCH">
+      <position x="887.0" y="90.0" lat="47.57834833659335" lon="-122.12037213389478" alt="2.0"/>
     </network>
   </networks>
   <devices>
@@ -25,13 +31,13 @@
       </services>
     </device>
     <device id="3" name="C" icon="" canvas="0" type="router" class="" image="" compose="" compose_name="">
-      <position x="902.0" y="705.0" lat="47.5727578101248" lon="-122.12017001295585" alt="2.0"/>
+      <position x="902.0" y="706.0" lat="47.5727487193518" lon="-122.12017001295585" alt="2.0"/>
       <services>
         <service name="zebra"/>
       </services>
     </device>
     <device id="4" name="D" icon="" canvas="0" type="router" class="" image="" compose="" compose_name="">
-      <position x="1068.0" y="381.0" lat="47.5757031374876" lon="-122.11793320789839" alt="2.0"/>
+      <position x="1059.0" y="373.0" lat="47.575775859524306" lon="-122.11805448046174" alt="2.0"/>
       <services>
         <service name="zebra"/>
       </services>
@@ -43,19 +49,31 @@
       </services>
     </device>
     <device id="9" name="n9" icon="" canvas="1" type="PC" class="" image="" compose="" compose_name="">
-      <position x="120.0" y="234.0" lat="47.577039388789764" lon="-122.13070725123856" alt="2.0"/>
+      <position x="173.0" y="230.0" lat="47.577075748892845" lon="-122.1299930905877" alt="2.0"/>
       <services>
         <service name="DefaultRoute"/>
       </services>
     </device>
     <device id="8" name="n8" icon="" canvas="1" type="PC" class="" image="" compose="" compose_name="">
-      <position x="120.0" y="795.0" lat="47.57193963423524" lon="-122.13070725123856" alt="2.0"/>
+      <position x="125.0" y="794.0" lat="47.57194872514868" lon="-122.13063987759226" alt="2.0"/>
       <services>
         <service name="DefaultRoute"/>
       </services>
     </device>
     <device id="11" name="n11" icon="" canvas="1" type="PC" class="" image="" compose="" compose_name="">
       <position x="1162.0" y="794.0" lat="47.57194872514868" lon="-122.11666658334778" alt="2.0"/>
+      <services>
+        <service name="DefaultRoute"/>
+      </services>
+    </device>
+    <device id="13" name="n13" icon="" canvas="1" type="PC" class="" image="" compose="" compose_name="">
+      <position x="1241.0" y="514.0" lat="47.5744941188303" lon="-122.11560207973609" alt="2.0"/>
+      <services>
+        <service name="DefaultRoute"/>
+      </services>
+    </device>
+    <device id="15" name="n15" icon="" canvas="1" type="PC" class="" image="" compose="" compose_name="">
+      <position x="1089.0" y="97.0" lat="47.57828470794293" lon="-122.11765023858389" alt="2.0"/>
       <services>
         <service name="DefaultRoute"/>
       </services>
@@ -132,6 +150,26 @@
       <iface2 id="0" name="eth0" mac="00:00:00:aa:00:15" ip4="172.16.172.20" ip4_mask="24"/>
       <options delay="0" bandwidth="0" loss="0.0" dup="0" jitter="0" unidirectional="0" buffer="0"/>
     </link>
+    <link node1="4" node2="12">
+      <iface1 id="3" name="eth3" mac="00:00:00:aa:00:16" ip4="172.16.174.1" ip4_mask="24"/>
+      <iface2 id="0" name="veth12.0.1"/>
+      <options delay="0" bandwidth="0" loss="0.0" dup="0" jitter="0" unidirectional="0" buffer="0"/>
+    </link>
+    <link node1="12" node2="13">
+      <iface1 id="1" name="veth12.1.1"/>
+      <iface2 id="0" name="eth0" mac="00:00:00:aa:00:17" ip4="172.16.174.20" ip4_mask="24"/>
+      <options delay="0" bandwidth="0" loss="0.0" dup="0" jitter="0" unidirectional="0" buffer="0"/>
+    </link>
+    <link node1="5" node2="14">
+      <iface1 id="4" name="eth4" mac="00:00:00:aa:00:18" ip4="172.16.174.1" ip4_mask="24"/>
+      <iface2 id="0" name="veth14.0.1"/>
+      <options delay="0" bandwidth="0" loss="0.0" dup="0" jitter="0" unidirectional="0" buffer="0"/>
+    </link>
+    <link node1="14" node2="15">
+      <iface1 id="1" name="veth14.1.1"/>
+      <iface2 id="0" name="eth0" mac="00:00:00:aa:00:19" ip4="172.16.174.21" ip4_mask="24"/>
+      <options delay="0" bandwidth="0" loss="0.0" dup="0" jitter="0" unidirectional="0" buffer="0"/>
+    </link>
   </links>
   <service_configurations>
     <service name="zebra" node="1">
@@ -150,9 +188,22 @@ interface eth2
 interface eth3 
   ip address 172.16.160.1/21
 
+! A B C
 ip route 172.16.160.0/21 192.168.160.1
-ip route 172.16.168.0/22 192.168.100.2 
-ip route 172.16.172.0/23 192.168.100.2]]></template>
+ip route 172.16.168.0/22 192.168.100.2
+ip route 172.16.172.0/23 192.168.100.2
+
+! C
+ip route 172.16.174.0/24 192.168.100.23
+ip route 172.16.175.0/26 192.168.100.23
+
+! D
+ip route 172.16.174.0/24 192.168.100.23
+ip route 172.16.175.0/26 192.168.100.23
+
+! E
+ip route 172.16.175.64/26 192.168.100.18
+ip route 172.16.175.128/25 192.168.100.18]]></template>
       </templates>
     </service>
     <service name="zebra" node="2">
@@ -172,8 +223,15 @@ interface eth3
   ip address 172.16.168.1/22
 
 ip route 172.16.160.0/21 192.168.100.1 
-ip route 172.16.168.0/22 172.16.168.1 
-ip route 172.16.172.0/23 192.168.100.7]]></template>
+ip route 172.16.168.0/22 172.16.168.1
+ip route 172.16.172.0/23 192.168.100.7
+
+
+ip route 172.16.174.0/24 192.168.100.7
+ip route 172.16.175.0/26 192.168.100.7
+
+ip route 172.16.175.64/26 192.168.100.27
+ip route 172.16.175.128/25 192.168.100.27]]></template>
       </templates>
     </service>
     <service name="zebra" node="3">
@@ -192,24 +250,86 @@ interface eth2
 interface eth3
   ip address 172.16.172.1/23
 
+! A B C
 ip route 172.16.160.0/21 192.168.100.6
 ip route 172.16.168.0/22 192.168.100.6
-ip route 172.16.172.0/23 172.16.172.1]]></template>
+ip route 172.16.172.0/23 172.16.172.1
+
+! D
+ip route 172.16.174.0/24 192.168.100.10
+ip route 172.16.175.0/26 192.168.100.10
+
+! E
+ip route 172.16.175.64/26 192.168.100.31
+ip route 172.16.175.128/25 192.168.100.31]]></template>
       </templates>
     </service>
     <service name="zebra" node="4">
       <templates>
-        <template name="/usr/local/etc/quagga/Quagga.conf"><![CDATA[ip route 192.168.100.9/30 192.168.100.11
-ip route 192.168.100.13/30 192.168.100.14
-ip route 192.168.100.21/30 192.168.100.23]]></template>
+        <template name="/usr/local/etc/quagga/Quagga.conf"><![CDATA[!D
+
+interface eth0
+  ip address 192.168.100.9/30
+
+interface eth1
+  ip address 192.168.100.14/30
+
+interface eth2
+  ip address 192.168.100.21/30
+
+interface eth3
+  ip address 172.16.174.1/24
+
+interface eth3
+  ip address 172.16.175.1/26
+
+! A B C
+ip route 172.16.160.0/21 192.168.160.22
+ip route 172.16.168.0/22 192.168.100.9
+ip route 172.16.172.0/23 192.168.100.9
+
+! D
+ip route 172.16.174.0/24 172.16.174.1
+ip route 172.16.175.0/26 172.16.175.1
+
+! E
+ip route 172.16.175.64/26 192.168.100.9
+ip route 172.16.175.128/25 192.168.100.9]]></template>
       </templates>
     </service>
     <service name="zebra" node="5">
       <templates>
-        <template name="/usr/local/etc/quagga/Quagga.conf"><![CDATA[ip route 192.168.100.13/30 192.168.100.15
-ip route 192.168.100.17/30 192.168.100.18
-ip route 192.168.100.25/30 192.168.100.227
-ip route 192.168.100.29/30 192.168.100.31]]></template>
+        <template name="/usr/local/etc/quagga/Quagga.conf"><![CDATA[!E
+
+interface eth0
+  ip address 192.168.100.15/30
+
+interface eth1
+  ip address 192.168.100.18/30
+
+interface eth2
+  ip address 192.168.100.31/30
+
+interface eth3
+  ip address 192.168.100.27/30
+
+interface eth4
+  ip address 174.16.175.64/26
+
+interface eth4
+  ip address 174.16.175.128/25
+
+
+! A
+ip route 172.16.160.0/21 192.168.160.19 
+! B
+ip route 172.16.168.0/22 192.168.100.26
+! C
+ip route 172.16.172.0/23 192.168.100.30
+
+! D
+ip route 172.16.174.0/24 192.168.100.14
+ip route 172.16.175.0/26 192.168.100.14]]></template>
       </templates>
     </service>
   </service_configurations>
