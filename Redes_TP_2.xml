@@ -31,13 +31,13 @@
       </services>
     </device>
     <device id="3" name="C" icon="" canvas="0" type="router" class="" image="" compose="" compose_name="">
-      <position x="902.0" y="706.0" lat="47.5727487193518" lon="-122.12017001295585" alt="2.0"/>
+      <position x="910.0" y="701.0" lat="47.57279417320098" lon="-122.12006221512175" alt="2.0"/>
       <services>
         <service name="zebra"/>
       </services>
     </device>
     <device id="4" name="D" icon="" canvas="0" type="router" class="" image="" compose="" compose_name="">
-      <position x="1059.0" y="373.0" lat="47.575775859524306" lon="-122.11805448046174" alt="2.0"/>
+      <position x="1059.0" y="374.0" lat="47.57576676927524" lon="-122.11805448046174" alt="2.0"/>
       <services>
         <service name="zebra"/>
       </services>
@@ -55,25 +55,25 @@
       </services>
     </device>
     <device id="8" name="n8" icon="" canvas="1" type="PC" class="" image="" compose="" compose_name="">
-      <position x="125.0" y="794.0" lat="47.57194872514868" lon="-122.13063987759226" alt="2.0"/>
-      <services>
-        <service name="DefaultRoute"/>
-      </services>
-    </device>
-    <device id="11" name="n11" icon="" canvas="1" type="PC" class="" image="" compose="" compose_name="">
-      <position x="1162.0" y="794.0" lat="47.57194872514868" lon="-122.11666658334778" alt="2.0"/>
+      <position x="132.0" y="795.0" lat="47.57193963423524" lon="-122.13054555448743" alt="2.0"/>
       <services>
         <service name="DefaultRoute"/>
       </services>
     </device>
     <device id="13" name="n13" icon="" canvas="1" type="PC" class="" image="" compose="" compose_name="">
-      <position x="1241.0" y="514.0" lat="47.5744941188303" lon="-122.11560207973609" alt="2.0"/>
+      <position x="1244.0" y="516.0" lat="47.57447593788557" lon="-122.11556165554832" alt="2.0"/>
+      <services>
+        <service name="DefaultRoute"/>
+      </services>
+    </device>
+    <device id="11" name="n11" icon="" canvas="1" type="PC" class="" image="" compose="" compose_name="">
+      <position x="668.0" y="797.0" lat="47.57192145240362" lon="-122.12332309960311" alt="2.0"/>
       <services>
         <service name="DefaultRoute"/>
       </services>
     </device>
     <device id="15" name="n15" icon="" canvas="1" type="PC" class="" image="" compose="" compose_name="">
-      <position x="1089.0" y="97.0" lat="47.57828470794293" lon="-122.11765023858389" alt="2.0"/>
+      <position x="1143.0" y="90.0" lat="47.57834833659335" lon="-122.11692260320375" alt="2.0"/>
       <services>
         <service name="DefaultRoute"/>
       </services>
@@ -86,8 +86,8 @@
       <options delay="0" bandwidth="0" loss="0.0" dup="0" jitter="0" unidirectional="0" buffer="0"/>
     </link>
     <link node1="2" node2="3">
-      <iface1 id="1" name="eth1" mac="00:00:00:aa:00:02" ip4="192.168.100.6" ip4_mask="30"/>
-      <iface2 id="0" name="eth0" mac="00:00:00:aa:00:03" ip4="192.168.100.7" ip4_mask="30"/>
+      <iface1 id="1" name="eth1" mac="00:00:00:aa:00:02" ip4="192.168.100.5" ip4_mask="30"/>
+      <iface2 id="0" name="eth0" mac="00:00:00:aa:00:03" ip4="192.168.100.6" ip4_mask="30"/>
       <options delay="0" bandwidth="0" loss="0.0" dup="0" jitter="0" unidirectional="0" buffer="0"/>
     </link>
     <link node1="3" node2="4">
@@ -96,78 +96,78 @@
       <options delay="0" bandwidth="0" loss="0.0" dup="0" jitter="0" unidirectional="0" buffer="0"/>
     </link>
     <link node1="4" node2="5">
-      <iface1 id="1" name="eth1" mac="00:00:00:aa:00:06" ip4="192.168.100.14" ip4_mask="30"/>
-      <iface2 id="0" name="eth0" mac="00:00:00:aa:00:07" ip4="192.168.100.15" ip4_mask="30"/>
+      <iface1 id="1" name="eth1" mac="00:00:00:aa:00:06" ip4="192.168.100.13" ip4_mask="30"/>
+      <iface2 id="0" name="eth0" mac="00:00:00:aa:00:07" ip4="192.168.100.14" ip4_mask="30"/>
       <options delay="0" bandwidth="0" loss="0.0" dup="0" jitter="0" unidirectional="0" buffer="0"/>
     </link>
     <link node1="5" node2="1">
-      <iface1 id="1" name="eth1" mac="00:00:00:aa:00:08" ip4="192.168.100.18" ip4_mask="30"/>
-      <iface2 id="1" name="eth1" mac="00:00:00:aa:00:09" ip4="192.168.100.19" ip4_mask="30"/>
+      <iface1 id="1" name="eth1" mac="00:00:00:aa:00:08" ip4="192.168.100.17" ip4_mask="30"/>
+      <iface2 id="1" name="eth1" mac="00:00:00:aa:00:09" ip4="192.168.100.18" ip4_mask="30"/>
       <options delay="0" bandwidth="0" loss="0.0" dup="0" jitter="0" unidirectional="0" buffer="0"/>
     </link>
     <link node1="1" node2="4">
-      <iface1 id="2" name="eth2" mac="00:00:00:aa:00:0a" ip4="192.168.100.22" ip4_mask="30"/>
-      <iface2 id="2" name="eth2" mac="00:00:00:aa:00:0b" ip4="192.168.100.23" ip4_mask="30"/>
+      <iface1 id="2" name="eth2" mac="00:00:00:aa:00:0a" ip4="192.168.100.21" ip4_mask="30"/>
+      <iface2 id="2" name="eth2" mac="00:00:00:aa:00:0b" ip4="192.168.100.22" ip4_mask="30"/>
       <options delay="0" bandwidth="0" loss="0.0" dup="0" jitter="0" unidirectional="0" buffer="0"/>
     </link>
     <link node1="3" node2="5">
-      <iface1 id="2" name="eth2" mac="00:00:00:aa:00:0c" ip4="192.168.100.30" ip4_mask="30"/>
-      <iface2 id="2" name="eth2" mac="00:00:00:aa:00:0d" ip4="192.168.100.31" ip4_mask="30"/>
+      <iface1 id="2" name="eth2" mac="00:00:00:aa:00:0c" ip4="192.168.100.29" ip4_mask="30"/>
+      <iface2 id="2" name="eth2" mac="00:00:00:aa:00:0d" ip4="192.168.100.30" ip4_mask="30"/>
       <options delay="0" bandwidth="0" loss="0.0" dup="0" jitter="0" unidirectional="0" buffer="0"/>
     </link>
     <link node1="5" node2="2">
-      <iface1 id="3" name="eth3" mac="00:00:00:aa:00:0e" ip4="192.168.100.27" ip4_mask="30"/>
-      <iface2 id="2" name="eth2" mac="00:00:00:aa:00:0f" ip4="192.168.100.26" ip4_mask="30"/>
+      <iface1 id="3" name="eth3" mac="00:00:00:aa:00:0e" ip4="192.168.100.26" ip4_mask="30"/>
+      <iface2 id="2" name="eth2" mac="00:00:00:aa:00:0f" ip4="192.168.100.25" ip4_mask="30"/>
       <options delay="0" bandwidth="0" loss="0.0" dup="0" jitter="0" unidirectional="0" buffer="0"/>
     </link>
     <link node1="1" node2="6">
       <iface1 id="3" name="eth3" mac="00:00:00:aa:00:10" ip4="172.16.160.1" ip4_mask="21"/>
-      <iface2 id="0" name="veth6.0.1"/>
+      <iface2 id="0" name="veth6.0.2"/>
       <options delay="0" bandwidth="0" loss="0.0" dup="0" jitter="0" unidirectional="0" buffer="0"/>
     </link>
     <link node1="2" node2="7">
       <iface1 id="3" name="eth3" mac="00:00:00:aa:00:11" ip4="172.16.168.1" ip4_mask="22"/>
-      <iface2 id="0" name="veth7.0.1"/>
+      <iface2 id="0" name="veth7.0.2"/>
       <options delay="0" bandwidth="0" loss="0.0" dup="0" jitter="0" unidirectional="0" buffer="0"/>
     </link>
     <link node1="9" node2="6">
       <iface1 id="0" name="eth0" mac="00:00:00:aa:00:12" ip4="172.16.160.20" ip4_mask="21"/>
-      <iface2 id="1" name="veth6.1.1"/>
+      <iface2 id="1" name="veth6.1.2"/>
       <options delay="0" bandwidth="0" loss="0.0" dup="0" jitter="0" unidirectional="0" buffer="0"/>
     </link>
     <link node1="8" node2="7">
       <iface1 id="0" name="eth0" mac="00:00:00:aa:00:13" ip4="172.16.168.20" ip4_mask="22"/>
-      <iface2 id="1" name="veth7.1.1"/>
+      <iface2 id="1" name="veth7.1.2"/>
       <options delay="0" bandwidth="0" loss="0.0" dup="0" jitter="0" unidirectional="0" buffer="0"/>
     </link>
     <link node1="3" node2="10">
       <iface1 id="3" name="eth3" mac="00:00:00:aa:00:14" ip4="172.16.172.1" ip4_mask="23"/>
-      <iface2 id="0" name="veth10.0.1"/>
-      <options delay="0" bandwidth="0" loss="0.0" dup="0" jitter="0" unidirectional="0" buffer="0"/>
-    </link>
-    <link node1="10" node2="11">
-      <iface1 id="1" name="veth10.1.1"/>
-      <iface2 id="0" name="eth0" mac="00:00:00:aa:00:15" ip4="172.16.172.20" ip4_mask="24"/>
+      <iface2 id="0" name="veth10.0.2"/>
       <options delay="0" bandwidth="0" loss="0.0" dup="0" jitter="0" unidirectional="0" buffer="0"/>
     </link>
     <link node1="4" node2="12">
       <iface1 id="3" name="eth3" mac="00:00:00:aa:00:16" ip4="172.16.174.1" ip4_mask="24"/>
-      <iface2 id="0" name="veth12.0.1"/>
+      <iface2 id="0" name="veth12.0.2"/>
       <options delay="0" bandwidth="0" loss="0.0" dup="0" jitter="0" unidirectional="0" buffer="0"/>
     </link>
     <link node1="12" node2="13">
-      <iface1 id="1" name="veth12.1.1"/>
+      <iface1 id="1" name="veth12.1.2"/>
       <iface2 id="0" name="eth0" mac="00:00:00:aa:00:17" ip4="172.16.174.20" ip4_mask="24"/>
       <options delay="0" bandwidth="0" loss="0.0" dup="0" jitter="0" unidirectional="0" buffer="0"/>
     </link>
     <link node1="5" node2="14">
-      <iface1 id="4" name="eth4" mac="00:00:00:aa:00:18" ip4="172.16.174.1" ip4_mask="24"/>
-      <iface2 id="0" name="veth14.0.1"/>
+      <iface1 id="4" name="eth4" mac="00:00:00:aa:00:18" ip4="172.16.175.65" ip4_mask="24"/>
+      <iface2 id="0" name="veth14.0.2"/>
+      <options delay="0" bandwidth="0" loss="0.0" dup="0" jitter="0" unidirectional="0" buffer="0"/>
+    </link>
+    <link node1="11" node2="10">
+      <iface1 id="0" name="eth0" mac="00:00:00:aa:00:15" ip4="172.16.172.20" ip4_mask="23"/>
+      <iface2 id="1" name="veth10.1.2"/>
       <options delay="0" bandwidth="0" loss="0.0" dup="0" jitter="0" unidirectional="0" buffer="0"/>
     </link>
     <link node1="14" node2="15">
-      <iface1 id="1" name="veth14.1.1"/>
-      <iface2 id="0" name="eth0" mac="00:00:00:aa:00:19" ip4="172.16.174.21" ip4_mask="24"/>
+      <iface1 id="1" name="veth14.1.2"/>
+      <iface2 id="0" name="eth0" mac="00:00:00:aa:00:19" ip4="172.16.175.20" ip4_mask="24"/>
       <options delay="0" bandwidth="0" loss="0.0" dup="0" jitter="0" unidirectional="0" buffer="0"/>
     </link>
   </links>
@@ -180,10 +180,10 @@ interface eth0
   ip address 192.168.100.1/30
 
 interface eth1 
-  ip address 192.168.100.19/30
+  ip address 192.168.100.18/30
 
 interface eth2 
-  ip address 192.168.100.22/30
+  ip address 192.168.100.21/30
 
 interface eth3 
   ip address 172.16.160.1/21
@@ -193,17 +193,13 @@ ip route 172.16.160.0/21 192.168.160.1
 ip route 172.16.168.0/22 192.168.100.2
 ip route 172.16.172.0/23 192.168.100.2
 
-! C
-ip route 172.16.174.0/24 192.168.100.23
-ip route 172.16.175.0/26 192.168.100.23
-
 ! D
-ip route 172.16.174.0/24 192.168.100.23
-ip route 172.16.175.0/26 192.168.100.23
+ip route 172.16.174.0/24 192.168.100.22
+ip route 172.16.175.0/26 192.168.100.22
 
 ! E
-ip route 172.16.175.64/26 192.168.100.18
-ip route 172.16.175.128/25 192.168.100.18]]></template>
+ip route 172.16.175.64/26 192.168.100.17
+ip route 172.16.175.128/25 192.168.100.17]]></template>
       </templates>
     </service>
     <service name="zebra" node="2">
@@ -214,22 +210,25 @@ interface eth0
   ip address 192.168.100.2/30
 
 interface eth1 
-  ip address 192.168.100.6/30
+  ip address 192.168.100.5/30
 
 interface eth2 
-  ip address 192.168.100.26/30
+  ip address 192.168.100.25/30
 
 interface eth3 
   ip address 172.16.168.1/22
 
+
+! A B C
 ip route 172.16.160.0/21 192.168.100.1 
 ip route 172.16.168.0/22 172.16.168.1
 ip route 172.16.172.0/23 192.168.100.7
 
-
+! D
 ip route 172.16.174.0/24 192.168.100.7
 ip route 172.16.175.0/26 192.168.100.7
 
+! E
 ip route 172.16.175.64/26 192.168.100.27
 ip route 172.16.175.128/25 192.168.100.27]]></template>
       </templates>
@@ -238,21 +237,26 @@ ip route 172.16.175.128/25 192.168.100.27]]></template>
       <templates>
         <template name="/usr/local/etc/quagga/Quagga.conf"><![CDATA[!C
 
+! A
 interface eth0
-  ip address 192.168.100.7/30
+  ip address 192.168.100.6/30
 
+! C
 interface eth1
   ip address 192.168.100.9/30
 
+! E
 interface eth2
   ip address 192.168.100.29/30
 
+! B
 interface eth3
   ip address 172.16.172.1/23
 
+
 ! A B C
-ip route 172.16.160.0/21 192.168.100.6
-ip route 172.16.168.0/22 192.168.100.6
+ip route 172.16.160.0/21 192.168.100.5
+ip route 172.16.168.0/22 192.168.100.5
 ip route 172.16.172.0/23 172.16.172.1
 
 ! D
@@ -260,8 +264,8 @@ ip route 172.16.174.0/24 192.168.100.10
 ip route 172.16.175.0/26 192.168.100.10
 
 ! E
-ip route 172.16.175.64/26 192.168.100.31
-ip route 172.16.175.128/25 192.168.100.31]]></template>
+ip route 172.16.175.64/26 192.168.100.30
+ip route 172.16.175.128/25 192.168.100.30]]></template>
       </templates>
     </service>
     <service name="zebra" node="4">
@@ -269,13 +273,13 @@ ip route 172.16.175.128/25 192.168.100.31]]></template>
         <template name="/usr/local/etc/quagga/Quagga.conf"><![CDATA[!D
 
 interface eth0
-  ip address 192.168.100.9/30
+  ip address 192.168.100.10/30
 
 interface eth1
-  ip address 192.168.100.14/30
+  ip address 192.168.100.13/30
 
 interface eth2
-  ip address 192.168.100.21/30
+  ip address 192.168.100.22/30
 
 interface eth3
   ip address 172.16.174.1/24
@@ -284,7 +288,7 @@ interface eth3
   ip address 172.16.175.1/26
 
 ! A B C
-ip route 172.16.160.0/21 192.168.160.22
+ip route 172.16.160.0/21 192.168.160.21
 ip route 172.16.168.0/22 192.168.100.9
 ip route 172.16.172.0/23 192.168.100.9
 
@@ -293,8 +297,8 @@ ip route 172.16.174.0/24 172.16.174.1
 ip route 172.16.175.0/26 172.16.175.1
 
 ! E
-ip route 172.16.175.64/26 192.168.100.9
-ip route 172.16.175.128/25 192.168.100.9]]></template>
+ip route 172.16.175.64/26 192.168.100.15
+ip route 172.16.175.128/25 192.168.100.15]]></template>
       </templates>
     </service>
     <service name="zebra" node="5">
@@ -302,16 +306,16 @@ ip route 172.16.175.128/25 192.168.100.9]]></template>
         <template name="/usr/local/etc/quagga/Quagga.conf"><![CDATA[!E
 
 interface eth0
-  ip address 192.168.100.15/30
+  ip address 192.168.100.14/30
 
 interface eth1
-  ip address 192.168.100.18/30
+  ip address 192.168.100.17/30
 
 interface eth2
-  ip address 192.168.100.31/30
+  ip address 192.168.100.30/30
 
 interface eth3
-  ip address 192.168.100.27/30
+  ip address 192.168.100.26/30
 
 interface eth4
   ip address 174.16.175.64/26
@@ -321,15 +325,15 @@ interface eth4
 
 
 ! A
-ip route 172.16.160.0/21 192.168.160.19 
+ip route 172.16.160.0/21 192.168.160.18
 ! B
-ip route 172.16.168.0/22 192.168.100.26
+ip route 172.16.168.0/22 192.168.100.25
 ! C
-ip route 172.16.172.0/23 192.168.100.30
+ip route 172.16.172.0/23 192.168.100.29
 
 ! D
-ip route 172.16.174.0/24 192.168.100.14
-ip route 172.16.175.0/26 192.168.100.14]]></template>
+ip route 172.16.174.0/24 192.168.100.13
+ip route 172.16.175.0/26 192.168.100.13]]></template>
       </templates>
     </service>
   </service_configurations>
