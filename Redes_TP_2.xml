@@ -8,7 +8,7 @@
       <position x="364.0" y="796.0" lat="47.571930543320214" lon="-122.12741941729868" alt="2.0"/>
     </network>
     <network id="10" name="sC" icon="" canvas="1" type="SWITCH">
-      <position x="930.0" y="794.0" lat="47.57194872514868" lon="-122.11979272053652" alt="2.0"/>
+      <position x="912.0" y="794.0" lat="47.57194872514868" lon="-122.12003526566323" alt="2.0"/>
     </network>
     <network id="12" name="sD" icon="" canvas="1" type="SWITCH">
       <position x="1245.0" y="377.0" lat="47.57573949851857" lon="-122.11554818081905" alt="2.0"/>
@@ -25,7 +25,7 @@
       </services>
     </device>
     <device id="2" name="B" icon="" canvas="0" type="router" class="" image="" compose="" compose_name="">
-      <position x="405.0" y="713.0" lat="47.57268508389668" lon="-122.12686695339896" alt="2.0"/>
+      <position x="409.0" y="711.0" lat="47.57270326546317" lon="-122.12681305448191" alt="2.0"/>
       <services>
         <service name="zebra"/>
       </services>
@@ -61,7 +61,7 @@
       </services>
     </device>
     <device id="13" name="n13" icon="" canvas="1" type="PC" class="" image="" compose="" compose_name="">
-      <position x="1244.0" y="516.0" lat="47.57447593788557" lon="-122.11556165554832" alt="2.0"/>
+      <position x="1242.0" y="516.0" lat="47.57447593788557" lon="-122.11558860500683" alt="2.0"/>
       <services>
         <service name="DefaultRoute"/>
       </services>
@@ -122,51 +122,51 @@
     </link>
     <link node1="1" node2="6">
       <iface1 id="3" name="eth3" mac="00:00:00:aa:00:10" ip4="172.16.160.1" ip4_mask="21"/>
-      <iface2 id="0" name="veth6.0.2"/>
+      <iface2 id="0" name="veth6.0.1"/>
       <options delay="0" bandwidth="0" loss="0.0" dup="0" jitter="0" unidirectional="0" buffer="0"/>
     </link>
     <link node1="2" node2="7">
       <iface1 id="3" name="eth3" mac="00:00:00:aa:00:11" ip4="172.16.168.1" ip4_mask="22"/>
-      <iface2 id="0" name="veth7.0.2"/>
+      <iface2 id="0" name="veth7.0.1"/>
       <options delay="0" bandwidth="0" loss="0.0" dup="0" jitter="0" unidirectional="0" buffer="0"/>
     </link>
     <link node1="9" node2="6">
       <iface1 id="0" name="eth0" mac="00:00:00:aa:00:12" ip4="172.16.160.20" ip4_mask="21"/>
-      <iface2 id="1" name="veth6.1.2"/>
+      <iface2 id="1" name="veth6.1.1"/>
       <options delay="0" bandwidth="0" loss="0.0" dup="0" jitter="0" unidirectional="0" buffer="0"/>
     </link>
     <link node1="8" node2="7">
       <iface1 id="0" name="eth0" mac="00:00:00:aa:00:13" ip4="172.16.168.20" ip4_mask="22"/>
-      <iface2 id="1" name="veth7.1.2"/>
+      <iface2 id="1" name="veth7.1.1"/>
       <options delay="0" bandwidth="0" loss="0.0" dup="0" jitter="0" unidirectional="0" buffer="0"/>
     </link>
     <link node1="3" node2="10">
       <iface1 id="3" name="eth3" mac="00:00:00:aa:00:14" ip4="172.16.172.1" ip4_mask="23"/>
-      <iface2 id="0" name="veth10.0.2"/>
+      <iface2 id="0" name="veth10.0.1"/>
       <options delay="0" bandwidth="0" loss="0.0" dup="0" jitter="0" unidirectional="0" buffer="0"/>
     </link>
     <link node1="4" node2="12">
       <iface1 id="3" name="eth3" mac="00:00:00:aa:00:16" ip4="172.16.174.1" ip4_mask="24"/>
-      <iface2 id="0" name="veth12.0.2"/>
+      <iface2 id="0" name="veth12.0.1"/>
       <options delay="0" bandwidth="0" loss="0.0" dup="0" jitter="0" unidirectional="0" buffer="0"/>
     </link>
     <link node1="12" node2="13">
-      <iface1 id="1" name="veth12.1.2"/>
+      <iface1 id="1" name="veth12.1.1"/>
       <iface2 id="0" name="eth0" mac="00:00:00:aa:00:17" ip4="172.16.174.20" ip4_mask="24"/>
       <options delay="0" bandwidth="0" loss="0.0" dup="0" jitter="0" unidirectional="0" buffer="0"/>
     </link>
     <link node1="5" node2="14">
       <iface1 id="4" name="eth4" mac="00:00:00:aa:00:18" ip4="172.16.175.65" ip4_mask="24"/>
-      <iface2 id="0" name="veth14.0.2"/>
+      <iface2 id="0" name="veth14.0.1"/>
       <options delay="0" bandwidth="0" loss="0.0" dup="0" jitter="0" unidirectional="0" buffer="0"/>
     </link>
     <link node1="11" node2="10">
       <iface1 id="0" name="eth0" mac="00:00:00:aa:00:15" ip4="172.16.172.20" ip4_mask="23"/>
-      <iface2 id="1" name="veth10.1.2"/>
+      <iface2 id="1" name="veth10.1.1"/>
       <options delay="0" bandwidth="0" loss="0.0" dup="0" jitter="0" unidirectional="0" buffer="0"/>
     </link>
     <link node1="14" node2="15">
-      <iface1 id="1" name="veth14.1.2"/>
+      <iface1 id="1" name="veth14.1.1"/>
       <iface2 id="0" name="eth0" mac="00:00:00:aa:00:19" ip4="172.16.175.20" ip4_mask="24"/>
       <options delay="0" bandwidth="0" loss="0.0" dup="0" jitter="0" unidirectional="0" buffer="0"/>
     </link>
@@ -188,8 +188,10 @@ interface eth2
 interface eth3 
   ip address 172.16.160.1/21
 
-! A B C
+! A
 ip route 172.16.160.0/21 192.168.160.1
+
+! B C
 ip route 172.16.168.0/22 192.168.100.2
 ip route 172.16.172.0/23 192.168.100.2
 
@@ -222,11 +224,11 @@ interface eth3
 ! A B C
 ip route 172.16.160.0/21 192.168.100.1 
 ip route 172.16.168.0/22 172.16.168.1
-ip route 172.16.172.0/23 192.168.100.7
+ip route 172.16.172.0/23 192.168.100.6
 
 ! D
-ip route 172.16.174.0/24 192.168.100.7
-ip route 172.16.175.0/26 192.168.100.7
+ip route 172.16.174.0/24 192.168.100.6
+ip route 172.16.175.0/26 192.168.100.6
 
 ! E
 ip route 172.16.175.64/26 192.168.100.27
@@ -237,11 +239,11 @@ ip route 172.16.175.128/25 192.168.100.27]]></template>
       <templates>
         <template name="/usr/local/etc/quagga/Quagga.conf"><![CDATA[!C
 
-! A
+! B
 interface eth0
   ip address 192.168.100.6/30
 
-! C
+! D
 interface eth1
   ip address 192.168.100.9/30
 
@@ -249,7 +251,7 @@ interface eth1
 interface eth2
   ip address 192.168.100.29/30
 
-! B
+! C
 interface eth3
   ip address 172.16.172.1/23
 
@@ -270,25 +272,32 @@ ip route 172.16.175.128/25 192.168.100.30]]></template>
     </service>
     <service name="zebra" node="4">
       <templates>
-        <template name="/usr/local/etc/quagga/Quagga.conf"><![CDATA[!D
+        <template name="/usr/local/etc/quagga/Quagga.conf"><![CDATA[! D
 
+! C
 interface eth0
   ip address 192.168.100.10/30
 
+! E
 interface eth1
   ip address 192.168.100.13/30
 
+! A
 interface eth2
   ip address 192.168.100.22/30
 
+! D
 interface eth3
   ip address 172.16.174.1/24
 
+! D
 interface eth3
   ip address 172.16.175.1/26
 
-! A B C
+! A
 ip route 172.16.160.0/21 192.168.160.21
+
+! B C
 ip route 172.16.168.0/22 192.168.100.9
 ip route 172.16.172.0/23 192.168.100.9
 
