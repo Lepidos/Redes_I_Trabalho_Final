@@ -19,13 +19,13 @@
   </networks>
   <devices>
     <device id="1" name="A" icon="" canvas="1" type="router" class="" image="" compose="" compose_name="">
-      <position x="211.0" y="374.0" lat="47.57576676927524" lon="-122.12948105087574" alt="2.0"/>
+      <position x="213.0" y="376.0" lat="47.57574858877238" lon="-122.12945410141722" alt="2.0"/>
       <services>
         <service name="zebra"/>
       </services>
     </device>
     <device id="2" name="B" icon="" canvas="0" type="router" class="" image="" compose="" compose_name="">
-      <position x="409.0" y="711.0" lat="47.57270326546317" lon="-122.12681305448191" alt="2.0"/>
+      <position x="411.0" y="713.0" lat="47.57268508389668" lon="-122.12678610502338" alt="2.0"/>
       <services>
         <service name="zebra"/>
       </services>
@@ -73,7 +73,19 @@
       </services>
     </device>
     <device id="15" name="n15" icon="" canvas="1" type="PC" class="" image="" compose="" compose_name="">
-      <position x="1143.0" y="90.0" lat="47.57834833659335" lon="-122.11692260320375" alt="2.0"/>
+      <position x="1137.0" y="84.0" lat="47.57840287537504" lon="-122.11700345157932" alt="2.0"/>
+      <services>
+        <service name="DefaultRoute"/>
+      </services>
+    </device>
+    <device id="16" name="n16" icon="" canvas="1" type="PC" class="" image="" compose="" compose_name="">
+      <position x="1100.0" y="196.0" lat="47.57738480874951" lon="-122.11750201656201" alt="2.0"/>
+      <services>
+        <service name="DefaultRoute"/>
+      </services>
+    </device>
+    <device id="17" name="n17" icon="" canvas="1" type="PC" class="" image="" compose="" compose_name="">
+      <position x="1394.0" y="373.0" lat="47.575775859524306" lon="-122.11354044615904" alt="2.0"/>
       <services>
         <service name="DefaultRoute"/>
       </services>
@@ -156,7 +168,7 @@
       <options delay="0" bandwidth="0" loss="0.0" dup="0" jitter="0" unidirectional="0" buffer="0"/>
     </link>
     <link node1="5" node2="14">
-      <iface1 id="4" name="eth4" mac="00:00:00:aa:00:18" ip4="172.16.175.65" ip4_mask="24"/>
+      <iface1 id="4" name="eth4" mac="00:00:00:aa:00:18" ip4="172.16.175.254" ip4_mask="25"/>
       <iface2 id="0" name="veth14.0.1"/>
       <options delay="0" bandwidth="0" loss="0.0" dup="0" jitter="0" unidirectional="0" buffer="0"/>
     </link>
@@ -167,7 +179,17 @@
     </link>
     <link node1="14" node2="15">
       <iface1 id="1" name="veth14.1.1"/>
-      <iface2 id="0" name="eth0" mac="00:00:00:aa:00:19" ip4="172.16.175.20" ip4_mask="24"/>
+      <iface2 id="0" name="eth0" mac="00:00:00:aa:00:19" ip4="172.16.175.129" ip4_mask="25"/>
+      <options delay="0" bandwidth="0" loss="0.0" dup="0" jitter="0" unidirectional="0" buffer="0"/>
+    </link>
+    <link node1="14" node2="16">
+      <iface1 id="2" name="veth14.2.1"/>
+      <iface2 id="0" name="eth0" mac="00:00:00:aa:00:1a" ip4="172.16.175.65" ip4_mask="26"/>
+      <options delay="0" bandwidth="0" loss="0.0" dup="0" jitter="0" unidirectional="0" buffer="0"/>
+    </link>
+    <link node1="12" node2="17">
+      <iface1 id="2" name="veth12.2.1"/>
+      <iface2 id="0" name="eth0" mac="00:00:00:aa:00:1b" ip4="172.16.175.21" ip4_mask="26"/>
       <options delay="0" bandwidth="0" loss="0.0" dup="0" jitter="0" unidirectional="0" buffer="0"/>
     </link>
   </links>
@@ -186,10 +208,11 @@ interface eth2
   ip address 192.168.100.21/30
 
 interface eth3 
-  ip address 172.16.160.1/21
+!  ip address 172.16.160.1/21  first IP
+  ip address 172.16.167.254/21
 
 ! A
-ip route 172.16.160.0/21 192.168.160.1
+! ip route 172.16.160.0/21 172.16.160.1
 
 ! B C
 ip route 172.16.168.0/22 192.168.100.2
@@ -218,12 +241,17 @@ interface eth2
   ip address 192.168.100.25/30
 
 interface eth3 
-  ip address 172.16.168.1/22
+!  ip address 172.16.168.1/22 first IP
+  ip address 172.16.171.254/22
 
 
-! A B C
+! A
 ip route 172.16.160.0/21 192.168.100.1 
-ip route 172.16.168.0/22 172.16.168.1
+
+! B
+! ip route 172.16.168.0/22 172.16.168.1
+
+! C
 ip route 172.16.172.0/23 192.168.100.6
 
 ! D
@@ -231,8 +259,8 @@ ip route 172.16.174.0/24 192.168.100.6
 ip route 172.16.175.0/26 192.168.100.6
 
 ! E
-ip route 172.16.175.64/26 192.168.100.27
-ip route 172.16.175.128/25 192.168.100.27]]></template>
+ip route 172.16.175.64/26 192.168.100.26
+ip route 172.16.175.128/25 192.168.100.26]]></template>
       </templates>
     </service>
     <service name="zebra" node="3">
@@ -253,13 +281,16 @@ interface eth2
 
 ! C
 interface eth3
-  ip address 172.16.172.1/23
+!  ip address 172.16.172.1/23 first ip
+  ip address 172.16.173.254/23
 
 
-! A B C
+! A B
 ip route 172.16.160.0/21 192.168.100.5
 ip route 172.16.168.0/22 192.168.100.5
-ip route 172.16.172.0/23 172.16.172.1
+
+! C
+! ip route 172.16.172.0/23 172.16.172.1
 
 ! D
 ip route 172.16.174.0/24 192.168.100.10
@@ -295,15 +326,15 @@ interface eth3
   ip address 172.16.175.1/26
 
 ! A
-ip route 172.16.160.0/21 192.168.160.21
+ip route 172.16.160.0/21 192.168.100.21
 
 ! B C
 ip route 172.16.168.0/22 192.168.100.9
 ip route 172.16.172.0/23 192.168.100.9
 
 ! D
-ip route 172.16.174.0/24 172.16.174.1
-ip route 172.16.175.0/26 172.16.175.1
+! ip route 172.16.174.0/24 172.16.174.254
+! ip route 172.16.175.0/26 172.16.175.62
 
 ! E
 ip route 172.16.175.64/26 192.168.100.15
@@ -327,14 +358,12 @@ interface eth3
   ip address 192.168.100.26/30
 
 interface eth4
-  ip address 174.16.175.64/26
-
-interface eth4
-  ip address 174.16.175.128/25
+  ip address 172.16.175.126/26
+  ip address 172.16.175.254/25
 
 
 ! A
-ip route 172.16.160.0/21 192.168.160.18
+ip route 172.16.160.0/21 192.168.100.18
 ! B
 ip route 172.16.168.0/22 192.168.100.25
 ! C
@@ -343,6 +372,55 @@ ip route 172.16.172.0/23 192.168.100.29
 ! D
 ip route 172.16.174.0/24 192.168.100.13
 ip route 172.16.175.0/26 192.168.100.13]]></template>
+      </templates>
+    </service>
+    <service name="DefaultRoute" node="9">
+      <templates>
+        <template name="defaultroute.sh"><![CDATA[#!/bin/sh
+# auto-generated by DefaultRoute service
+ip route add default via 172.16.167.254]]></template>
+      </templates>
+    </service>
+    <service name="DefaultRoute" node="8">
+      <templates>
+        <template name="defaultroute.sh"><![CDATA[#!/bin/sh
+# auto-generated by DefaultRoute service
+ip route add default via 172.16.171.254]]></template>
+      </templates>
+    </service>
+    <service name="DefaultRoute" node="13">
+      <templates>
+        <template name="defaultroute.sh"><![CDATA[#!/bin/sh
+# auto-generated by DefaultRoute service
+ip route add default via 172.16.174.254]]></template>
+      </templates>
+    </service>
+    <service name="DefaultRoute" node="11">
+      <templates>
+        <template name="defaultroute.sh"><![CDATA[#!/bin/sh
+# auto-generated by DefaultRoute service
+ip route add default via 172.16.173.254]]></template>
+      </templates>
+    </service>
+    <service name="DefaultRoute" node="15">
+      <templates>
+        <template name="defaultroute.sh"><![CDATA[#!/bin/sh
+# auto-generated by DefaultRoute service
+ip route add default via 172.16.175.254]]></template>
+      </templates>
+    </service>
+    <service name="DefaultRoute" node="16">
+      <templates>
+        <template name="defaultroute.sh"><![CDATA[#!/bin/sh
+# auto-generated by DefaultRoute service
+ip route add default via 172.16.175.126]]></template>
+      </templates>
+    </service>
+    <service name="DefaultRoute" node="17">
+      <templates>
+        <template name="defaultroute.sh"><![CDATA[#!/bin/sh
+# auto-generated by DefaultRoute service
+ip route add default via 172.16.175.62]]></template>
       </templates>
     </service>
   </service_configurations>
