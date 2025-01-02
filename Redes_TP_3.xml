@@ -4,11 +4,11 @@
     <network id="6" name="sA" icon="" canvas="1" type="SWITCH">
       <position x="46.0" y="376.0" lat="47.57574858877238" lon="-122.13170438120393" alt="2.0"/>
     </network>
-    <network id="7" name="sB" icon="" canvas="1" type="SWITCH">
-      <position x="364.0" y="796.0" lat="47.571930543320214" lon="-122.12741941729868" alt="2.0"/>
-    </network>
     <network id="10" name="sC" icon="" canvas="1" type="SWITCH">
       <position x="912.0" y="794.0" lat="47.57194872514868" lon="-122.12003526566323" alt="2.0"/>
+    </network>
+    <network id="7" name="sB" icon="" canvas="1" type="SWITCH">
+      <position x="364.0" y="796.0" lat="47.571930543320214" lon="-122.12741941729868" alt="2.0"/>
     </network>
     <network id="12" name="sD" icon="" canvas="1" type="SWITCH">
       <position x="1245.0" y="377.0" lat="47.57573949851857" lon="-122.11554818081905" alt="2.0"/>
@@ -21,79 +21,79 @@
     <device id="1" name="A" icon="" canvas="1" type="router" class="" image="" compose="" compose_name="">
       <position x="213.0" y="376.0" lat="47.57574858877238" lon="-122.12945410141722" alt="2.0"/>
       <services>
-        <service name="DHCPClient"/>
+        <service name="zebra"/>
       </services>
     </device>
     <device id="2" name="B" icon="" canvas="0" type="router" class="" image="" compose="" compose_name="">
       <position x="411.0" y="713.0" lat="47.57268508389668" lon="-122.12678610502338" alt="2.0"/>
       <services>
-        <service name="DHCPClient"/>
+        <service name="zebra"/>
       </services>
     </device>
     <device id="3" name="C" icon="" canvas="0" type="router" class="" image="" compose="" compose_name="">
       <position x="910.0" y="701.0" lat="47.57279417320098" lon="-122.12006221512175" alt="2.0"/>
       <services>
-        <service name="DHCPClient"/>
+        <service name="zebra"/>
       </services>
     </device>
     <device id="4" name="D" icon="" canvas="0" type="router" class="" image="" compose="" compose_name="">
       <position x="1059.0" y="374.0" lat="47.57576676927524" lon="-122.11805448046174" alt="2.0"/>
       <services>
-        <service name="DHCPClient"/>
+        <service name="zebra"/>
       </services>
     </device>
     <device id="5" name="E" icon="" canvas="0" type="router" class="" image="" compose="" compose_name="">
       <position x="632.0" y="89.0" lat="47.57835742639425" lon="-122.12380818985652" alt="2.0"/>
       <services>
-        <service name="DHCPClient"/>
+        <service name="zebra"/>
       </services>
     </device>
     <device id="9" name="n9" icon="" canvas="1" type="PC" class="" image="" compose="" compose_name="">
-      <position x="175.0" y="228.0" lat="47.57709392893491" lon="-122.12996614112917" alt="2.0"/>
+      <position x="173.0" y="230.0" lat="47.577075748892845" lon="-122.1299930905877" alt="2.0"/>
       <services>
         <service name="DefaultRoute"/>
-        <service name="DHCP"/>
       </services>
     </device>
     <device id="8" name="n8" icon="" canvas="1" type="PC" class="" image="" compose="" compose_name="">
-      <position x="133.0" y="792.0" lat="47.571966906970836" lon="-122.13053207975817" alt="2.0"/>
+      <position x="132.0" y="795.0" lat="47.57193963423524" lon="-122.13054555448743" alt="2.0"/>
       <services>
         <service name="DefaultRoute"/>
-        <service name="DHCPClient"/>
       </services>
     </device>
     <device id="13" name="n13" icon="" canvas="1" type="PC" class="" image="" compose="" compose_name="">
       <position x="1242.0" y="516.0" lat="47.57447593788557" lon="-122.11558860500683" alt="2.0"/>
       <services>
         <service name="DefaultRoute"/>
-        <service name="DHCPClient"/>
       </services>
     </device>
     <device id="11" name="n11" icon="" canvas="1" type="PC" class="" image="" compose="" compose_name="">
       <position x="668.0" y="797.0" lat="47.57192145240362" lon="-122.12332309960311" alt="2.0"/>
       <services>
         <service name="DefaultRoute"/>
-        <service name="DHCPClient"/>
       </services>
     </device>
     <device id="15" name="n15" icon="" canvas="1" type="PC" class="" image="" compose="" compose_name="">
       <position x="1137.0" y="84.0" lat="47.57840287537504" lon="-122.11700345157932" alt="2.0"/>
       <services>
         <service name="DefaultRoute"/>
-        <service name="DHCPClient"/>
       </services>
     </device>
     <device id="16" name="n16" icon="" canvas="1" type="PC" class="" image="" compose="" compose_name="">
       <position x="1100.0" y="196.0" lat="47.57738480874951" lon="-122.11750201656201" alt="2.0"/>
       <services>
+        <service name="DHCP"/>
         <service name="DefaultRoute"/>
-        <service name="DHCPClient"/>
       </services>
     </device>
     <device id="17" name="n17" icon="" canvas="1" type="PC" class="" image="" compose="" compose_name="">
-      <position x="1395.0" y="371.0" lat="47.57579404001772" lon="-122.11352697142978" alt="2.0"/>
+      <position x="1394.0" y="373.0" lat="47.575775859524306" lon="-122.11354044615904" alt="2.0"/>
       <services>
         <service name="DefaultRoute"/>
+      </services>
+    </device>
+    <device id="18" name="n18" icon="" canvas="1" type="PC" class="" image="" compose="" compose_name="">
+      <position x="1027.0" y="244.0" lat="47.57694848842162" lon="-122.11848567179811" alt="2.0"/>
+      <services>
         <service name="DHCPClient"/>
       </services>
     </device>
@@ -140,12 +140,12 @@
       <options delay="0" bandwidth="0" loss="0.0" dup="0" jitter="0" unidirectional="0" buffer="0"/>
     </link>
     <link node1="1" node2="6">
-      <iface1 id="3" name="eth3" mac="00:00:00:aa:00:10" ip4="172.16.160.1" ip4_mask="21"/>
+      <iface1 id="3" name="eth3" mac="00:00:00:aa:00:10" ip4="172.16.167.254" ip4_mask="21"/>
       <iface2 id="0" name="veth6.0.1"/>
       <options delay="0" bandwidth="0" loss="0.0" dup="0" jitter="0" unidirectional="0" buffer="0"/>
     </link>
     <link node1="2" node2="7">
-      <iface1 id="3" name="eth3" mac="00:00:00:aa:00:11" ip4="172.16.168.1" ip4_mask="22"/>
+      <iface1 id="3" name="eth3" mac="00:00:00:aa:00:11" ip4="172.16.171.254" ip4_mask="22"/>
       <iface2 id="0" name="veth7.0.1"/>
       <options delay="0" bandwidth="0" loss="0.0" dup="0" jitter="0" unidirectional="0" buffer="0"/>
     </link>
@@ -160,12 +160,12 @@
       <options delay="0" bandwidth="0" loss="0.0" dup="0" jitter="0" unidirectional="0" buffer="0"/>
     </link>
     <link node1="3" node2="10">
-      <iface1 id="3" name="eth3" mac="00:00:00:aa:00:14" ip4="172.16.172.1" ip4_mask="23"/>
+      <iface1 id="3" name="eth3" mac="00:00:00:aa:00:14" ip4="172.16.173.254" ip4_mask="23"/>
       <iface2 id="0" name="veth10.0.1"/>
       <options delay="0" bandwidth="0" loss="0.0" dup="0" jitter="0" unidirectional="0" buffer="0"/>
     </link>
     <link node1="4" node2="12">
-      <iface1 id="3" name="eth3" mac="00:00:00:aa:00:16" ip4="172.16.174.1" ip4_mask="24"/>
+      <iface1 id="3" name="eth3" mac="00:00:00:aa:00:16" ip4="172.16.174.254" ip4_mask="24"/>
       <iface2 id="0" name="veth12.0.1"/>
       <options delay="0" bandwidth="0" loss="0.0" dup="0" jitter="0" unidirectional="0" buffer="0"/>
     </link>
@@ -199,94 +199,193 @@
       <iface2 id="0" name="eth0" mac="00:00:00:aa:00:1b" ip4="172.16.175.21" ip4_mask="26"/>
       <options delay="0" bandwidth="0" loss="0.0" dup="0" jitter="0" unidirectional="0" buffer="0"/>
     </link>
+    <link node1="14" node2="18">
+      <iface1 id="3" name="veth14.3.1"/>
+      <iface2 id="0" name="eth0" ip4="172.16.175.20" ip4_mask="25"/>
+      <options delay="0" bandwidth="0" loss="0.0" dup="0" jitter="0" unidirectional="0" buffer="0"/>
+    </link>
   </links>
   <service_configurations>
+    <service name="zebra" node="1">
+      <templates>
+        <template name="/usr/local/etc/quagga/Quagga.conf"><![CDATA[!A
+
+interface eth0 
+  ip address 192.168.100.1/30
+
+interface eth1 
+  ip address 192.168.100.18/30
+
+interface eth2 
+  ip address 192.168.100.21/30
+
+interface eth3 
+!  ip address 172.16.160.1/21  first IP
+  ip address 172.16.167.254/21
+
+! A
+! ip route 172.16.160.0/21 172.16.160.1
+
+! B C
+ip route 172.16.168.0/22 192.168.100.2
+ip route 172.16.172.0/23 192.168.100.2
+
+! D
+ip route 172.16.174.0/24 192.168.100.22
+ip route 172.16.175.0/26 192.168.100.22
+
+! E
+ip route 172.16.175.64/26 192.168.100.17
+ip route 172.16.175.128/25 192.168.100.17]]></template>
+      </templates>
+    </service>
+    <service name="zebra" node="2">
+      <templates>
+        <template name="/usr/local/etc/quagga/Quagga.conf"><![CDATA[!B
+
+interface eth0
+  ip address 192.168.100.2/30
+
+interface eth1 
+  ip address 192.168.100.5/30
+
+interface eth2 
+  ip address 192.168.100.25/30
+
+interface eth3 
+  ip address 172.16.171.254/22
+
+
+! A
+ip route 172.16.160.0/21 192.168.100.1 
+
+! B
+! ip route 172.16.168.0/22 172.16.168.1
+
+! C
+ip route 172.16.172.0/23 192.168.100.6
+
+! D
+ip route 172.16.174.0/24 192.168.100.6
+ip route 172.16.175.0/26 192.168.100.6
+
+! E
+ip route 172.16.175.64/26 192.168.100.26
+ip route 172.16.175.128/25 192.168.100.26]]></template>
+      </templates>
+    </service>
+    <service name="zebra" node="3">
+      <templates>
+        <template name="/usr/local/etc/quagga/Quagga.conf"><![CDATA[!C
+
+! B
+interface eth0
+  ip address 192.168.100.6/30
+
+! D
+interface eth1
+  ip address 192.168.100.9/30
+
+! E
+interface eth2
+  ip address 192.168.100.29/30
+
+! C
+interface eth3
+  ip address 172.16.173.254/23
+
+
+! A B
+ip route 172.16.160.0/21 192.168.100.5
+ip route 172.16.168.0/22 192.168.100.5
+
+! C
+! ip route 172.16.172.0/23 172.16.172.1
+
+! D
+ip route 172.16.174.0/24 192.168.100.10
+ip route 172.16.175.0/26 192.168.100.10
+
+! E
+ip route 172.16.175.64/26 192.168.100.30
+ip route 172.16.175.128/25 192.168.100.30]]></template>
+      </templates>
+    </service>
+    <service name="zebra" node="4">
+      <templates>
+        <template name="/usr/local/etc/quagga/Quagga.conf"><![CDATA[! D
+
+! C
+interface eth0
+  ip address 192.168.100.10/30
+
+! E
+interface eth1
+  ip address 192.168.100.13/30
+
+! A
+interface eth2
+  ip address 192.168.100.22/30
+
+! D
+interface eth3
+  ip address 172.16.174.254/24
+  ip address 172.16.175.62/26
+
+! A
+ip route 172.16.160.0/21 192.168.100.21
+
+! B C
+ip route 172.16.168.0/22 192.168.100.9
+ip route 172.16.172.0/23 192.168.100.9
+
+! D
+! ip route 172.16.174.0/24 172.16.174.254
+! ip route 172.16.175.0/26 172.16.175.62
+
+! E
+ip route 172.16.175.64/26 192.168.100.15
+ip route 172.16.175.128/25 192.168.100.15]]></template>
+      </templates>
+    </service>
+    <service name="zebra" node="5">
+      <templates>
+        <template name="/usr/local/etc/quagga/Quagga.conf"><![CDATA[!E
+
+interface eth0
+  ip address 192.168.100.14/30
+
+interface eth1
+  ip address 192.168.100.17/30
+
+interface eth2
+  ip address 192.168.100.30/30
+
+interface eth3
+  ip address 192.168.100.26/30
+
+interface eth4
+  ip address 172.16.175.126/26
+  ip address 172.16.175.254/25
+
+
+! A
+ip route 172.16.160.0/21 192.168.100.18
+! B
+ip route 172.16.168.0/22 192.168.100.25
+! C
+ip route 172.16.172.0/23 192.168.100.29
+
+! D
+ip route 172.16.174.0/24 192.168.100.13
+ip route 172.16.175.0/26 192.168.100.13]]></template>
+      </templates>
+    </service>
     <service name="DefaultRoute" node="9">
       <templates>
         <template name="defaultroute.sh"><![CDATA[#!/bin/sh
 # auto-generated by DefaultRoute service
 ip route add default via 172.16.167.254]]></template>
-      </templates>
-    </service>
-    <service name="DHCP" node="9">
-      <templates>
-        <template name="/etc/dhcp/dhcpd.conf"><![CDATA[# auto-generated by DHCP service (utility.py)
-# NOTE: move these option lines into the desired pool { } block(s) below
-#option domain-name "test.com";
-#option domain-name-servers 10.0.0.1;
-#option routers 10.0.0.1;
-
-log-facility local7;
-log-level info;
-log-filename /var/log/dhcpd.log;
-
-default-lease-time 600;
-max-lease-time 7200;
-
-ddns-update-style none;
-
-#subnet 172.16.160.0 netmask 255.255.248.0 {
-#  pool {
-#    range 172.16.163.255 172.16.167.254;
-#    default-lease-time 600;
-#    option routers 172.16.160.20;
-#  }
-#}
-
-subnet 172.16.160.0 netmask 255.255.248.0 {
-    range 172.16.160.1 172.16.167.254;  # Intervalo de endereços atribuídos
-    option routers 172.16.167.255;         # Gateway padrão (Router A)
-    option broadcast-address 172.16.160.0; # Endereço de difusão
-    option domain-name "redeA.local";   # Nome do domínio da rede
-}
-
-# Configuração da sub-rede B (172.16.168.0/22)
-subnet 172.16.168.0 netmask 255.255.252.0 {
-    range 172.16.168.1 172.16.171.254;  # Intervalo de endereços atribuídos
-    option routers 172.16.171.255;         # Gateway padrão (Router B)
-    option broadcast-address 172.16.168.0; # Endereço de difusão
-    option domain-name "redeB.local";   # Nome do domínio da rede
-}
-
-# Configuração da sub-rede C (172.16.172.0/23)
-subnet 172.16.172.0 netmask 255.255.254.0 {
-    range 172.16.172.0 172.16.173.254;  # Intervalo de endereços atribuídos
-    option routers 172.16.173.255;         # Gateway padrão (Router C)
-    option broadcast-address 172.16.172.0; # Endereço de difusão
-    option domain-name "redeC.local";   # Nome do domínio da rede
-}
-
-# Configuração da sub-rede D1 (172.16.174.0/24)
-subnet 172.16.174.0 netmask 255.255.255.0 {
-    range 172.16.174.1 172.16.174.254;  # Intervalo de endereços atribuídos
-    option routers 172.16.174.255;         # Gateway padrão (Router D)
-    option broadcast-address 172.16.174.0; # Endereço de difusão
-    option domain-name "redeD.local";   # Nome do domínio da rede
-}
-
-# Configuração da sub-rede D2 (172.16.175.0/26)
-subnet 172.16.175.0 netmask 255.255.255.192 {
-    range 172.16.175.1 172.16.175.62;   # Intervalo de endereços atribuídos
-    option routers 172.16.175.63;         # Gateway padrão (Router D)
-    option broadcast-address 172.16.175.0; # Endereço de difusão
-    option domain-name "redeD.local";   # Nome do domínio da rede
-}
-
-# Configuração da sub-rede E1 (172.16.175.64/26)
-subnet 172.16.175.64 netmask 255.255.255.192 {
-    range 172.16.175.65 172.16.175.126;  # Intervalo de endereços atribuídos
-    option routers 172.16.175.127;        # Gateway padrão (Router E)
-    option broadcast-address 172.16.175.64; # Endereço de difusão
-    option domain-name "redeE.local";   # Nome do domínio da rede
-}
-
-# Configuração da sub-rede E2 (172.16.175.128/25)
-subnet 172.16.175.128 netmask 255.255.255.128 {
-    range 172.16.175.129 172.16.175.254; # Intervalo de endereços atribuídos
-    option routers 172.16.175.255;       # Gateway padrão (Router E)
-    option broadcast-address 172.16.175.128; # Endereço de difusão
-    option domain-name "redeE.local";   # Nome do domínio da rede
-}]]></template>
       </templates>
     </service>
     <service name="DefaultRoute" node="8">
@@ -310,11 +409,38 @@ ip route add default via 172.16.174.254]]></template>
 ip route add default via 172.16.173.254]]></template>
       </templates>
     </service>
-    <service name="DefaultRoute" node="15">
+    <service name="DHCP" node="16">
       <templates>
-        <template name="defaultroute.sh"><![CDATA[#!/bin/sh
-# auto-generated by DefaultRoute service
-ip route add default via 172.16.175.254]]></template>
+        <template name="/etc/dhcp/dhcpd.conf"><![CDATA[# auto-generated by DHCP service (utility.py)
+# NOTE: move these option lines into the desired pool { } block(s) below
+#option domain-name "test.com";
+#option domain-name-servers 10.0.0.1;
+#option routers 10.0.0.1;
+
+log-facility local6;
+
+default-lease-time 600;
+max-lease-time 7200;
+
+ddns-update-style none;
+
+# Configuração da sub-rede E1 (172.16.175.64/26)
+subnet 172.16.175.64 netmask 255.255.255.192 {
+    range 172.16.175.70 172.16.175.126;  # Intervalo de endereços atribuídos
+    option routers 172.16.175.65;        # Gateway padrão (Router E)
+    option broadcast-address 172.16.175.127; # Endereço de difusão
+    option domain-name-servers 8.8.8.8, 8.8.4.4; # Servidores DNS
+    option domain-name "redeE.local";   # Nome do domínio da rede
+}
+
+# Configuração da sub-rede E2 (172.16.175.128/25)
+subnet 172.16.175.128 netmask 255.255.255.128 {
+    range 172.16.175.130 172.16.175.254; # Intervalo de endereços atribuídos
+    option routers 172.16.175.129;       # Gateway padrão (Router E)
+    option broadcast-address 172.16.175.255; # Endereço de difusão
+    option domain-name-servers 8.8.8.8, 8.8.4.4; # Servidores DNS
+    option domain-name "redeE.local";   # Nome do domínio da rede
+}]]></template>
       </templates>
     </service>
     <service name="DefaultRoute" node="16">
