@@ -21,89 +21,80 @@
     <device id="1" name="A" icon="" canvas="1" type="router" class="" image="" compose="" compose_name="">
       <position x="213.0" y="376.0" lat="47.57574858877238" lon="-122.12945410141722" alt="2.0"/>
       <services>
-        <service name="zebra"/>
-        <service name="OSPFv2"/>
-        <service name="OSPFv3"/>
-        <service name="IPForward"/>
+        <service name="DHCPClient"/>
       </services>
     </device>
     <device id="2" name="B" icon="" canvas="0" type="router" class="" image="" compose="" compose_name="">
       <position x="411.0" y="713.0" lat="47.57268508389668" lon="-122.12678610502338" alt="2.0"/>
       <services>
-        <service name="zebra"/>
-        <service name="OSPFv2"/>
-        <service name="OSPFv3"/>
-        <service name="IPForward"/>
+        <service name="DHCPClient"/>
       </services>
     </device>
     <device id="3" name="C" icon="" canvas="0" type="router" class="" image="" compose="" compose_name="">
       <position x="910.0" y="701.0" lat="47.57279417320098" lon="-122.12006221512175" alt="2.0"/>
       <services>
-        <service name="zebra"/>
-        <service name="OSPFv2"/>
-        <service name="OSPFv3"/>
-        <service name="IPForward"/>
+        <service name="DHCPClient"/>
       </services>
     </device>
     <device id="4" name="D" icon="" canvas="0" type="router" class="" image="" compose="" compose_name="">
       <position x="1059.0" y="374.0" lat="47.57576676927524" lon="-122.11805448046174" alt="2.0"/>
       <services>
-        <service name="zebra"/>
-        <service name="OSPFv2"/>
-        <service name="OSPFv3"/>
-        <service name="IPForward"/>
+        <service name="DHCPClient"/>
       </services>
     </device>
     <device id="5" name="E" icon="" canvas="0" type="router" class="" image="" compose="" compose_name="">
       <position x="632.0" y="89.0" lat="47.57835742639425" lon="-122.12380818985652" alt="2.0"/>
       <services>
-        <service name="zebra"/>
-        <service name="OSPFv2"/>
-        <service name="OSPFv3"/>
-        <service name="IPForward"/>
+        <service name="DHCPClient"/>
       </services>
     </device>
     <device id="9" name="n9" icon="" canvas="1" type="PC" class="" image="" compose="" compose_name="">
-      <position x="173.0" y="229.0" lat="47.577084838914665" lon="-122.1299930905877" alt="2.0"/>
+      <position x="175.0" y="228.0" lat="47.57709392893491" lon="-122.12996614112917" alt="2.0"/>
       <services>
         <service name="DefaultRoute"/>
         <service name="DHCP"/>
       </services>
     </device>
     <device id="8" name="n8" icon="" canvas="1" type="PC" class="" image="" compose="" compose_name="">
-      <position x="132.0" y="795.0" lat="47.57193963423524" lon="-122.13054555448743" alt="2.0"/>
+      <position x="133.0" y="792.0" lat="47.571966906970836" lon="-122.13053207975817" alt="2.0"/>
       <services>
         <service name="DefaultRoute"/>
+        <service name="DHCPClient"/>
       </services>
     </device>
     <device id="13" name="n13" icon="" canvas="1" type="PC" class="" image="" compose="" compose_name="">
       <position x="1242.0" y="516.0" lat="47.57447593788557" lon="-122.11558860500683" alt="2.0"/>
       <services>
         <service name="DefaultRoute"/>
+        <service name="DHCPClient"/>
       </services>
     </device>
     <device id="11" name="n11" icon="" canvas="1" type="PC" class="" image="" compose="" compose_name="">
       <position x="668.0" y="797.0" lat="47.57192145240362" lon="-122.12332309960311" alt="2.0"/>
       <services>
         <service name="DefaultRoute"/>
+        <service name="DHCPClient"/>
       </services>
     </device>
     <device id="15" name="n15" icon="" canvas="1" type="PC" class="" image="" compose="" compose_name="">
       <position x="1137.0" y="84.0" lat="47.57840287537504" lon="-122.11700345157932" alt="2.0"/>
       <services>
         <service name="DefaultRoute"/>
+        <service name="DHCPClient"/>
       </services>
     </device>
     <device id="16" name="n16" icon="" canvas="1" type="PC" class="" image="" compose="" compose_name="">
       <position x="1100.0" y="196.0" lat="47.57738480874951" lon="-122.11750201656201" alt="2.0"/>
       <services>
         <service name="DefaultRoute"/>
+        <service name="DHCPClient"/>
       </services>
     </device>
     <device id="17" name="n17" icon="" canvas="1" type="PC" class="" image="" compose="" compose_name="">
-      <position x="1394.0" y="373.0" lat="47.575775859524306" lon="-122.11354044615904" alt="2.0"/>
+      <position x="1395.0" y="371.0" lat="47.57579404001772" lon="-122.11352697142978" alt="2.0"/>
       <services>
         <service name="DefaultRoute"/>
+        <service name="DHCPClient"/>
       </services>
     </device>
   </devices>
@@ -225,7 +216,9 @@ ip route add default via 172.16.167.254]]></template>
 #option domain-name-servers 10.0.0.1;
 #option routers 10.0.0.1;
 
-log-facility local6;
+log-facility local7;
+log-level info;
+log-filename /var/log/dhcpd.log;
 
 default-lease-time 600;
 max-lease-time 7200;
