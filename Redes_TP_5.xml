@@ -8,13 +8,16 @@
       <position x="912.0" y="794.0" lat="47.57194872514868" lon="-122.12003526566323" alt="2.0"/>
     </network>
     <network id="7" name="sB" icon="" canvas="1" type="SWITCH">
-      <position x="364.0" y="796.0" lat="47.571930543320214" lon="-122.12741941729868" alt="2.0"/>
+      <position x="177.0" y="710.0" lat="47.57271235624405" lon="-122.12993919167066" alt="2.0"/>
     </network>
     <network id="12" name="sD" icon="" canvas="1" type="SWITCH">
       <position x="1245.0" y="377.0" lat="47.57573949851857" lon="-122.11554818081905" alt="2.0"/>
     </network>
     <network id="14" name="n14" icon="" canvas="1" type="SWITCH">
       <position x="887.0" y="90.0" lat="47.57834833659335" lon="-122.12037213389478" alt="2.0"/>
+    </network>
+    <network id="20" name="n20" icon="" canvas="1" type="SWITCH">
+      <position x="569.0" y="840.0" lat="47.57153054149698" lon="-122.12465709780002" alt="2.0"/>
     </network>
   </networks>
   <devices>
@@ -25,7 +28,7 @@
       </services>
     </device>
     <device id="2" name="B" icon="" canvas="0" type="router" class="" image="" compose="" compose_name="">
-      <position x="411.0" y="713.0" lat="47.57268508389668" lon="-122.12678610502338" alt="2.0"/>
+      <position x="413.0" y="713.0" lat="47.57268508389668" lon="-122.12675915556487" alt="2.0"/>
       <services>
         <service name="zebra"/>
       </services>
@@ -55,7 +58,7 @@
       </services>
     </device>
     <device id="8" name="n8" icon="" canvas="1" type="PC" class="" image="" compose="" compose_name="">
-      <position x="132.0" y="795.0" lat="47.57193963423524" lon="-122.13054555448743" alt="2.0"/>
+      <position x="88.0" y="793.0" lat="47.57195781606055" lon="-122.13113844257495" alt="2.0"/>
       <services>
         <service name="DefaultRoute"/>
       </services>
@@ -67,7 +70,7 @@
       </services>
     </device>
     <device id="11" name="n11" icon="" canvas="1" type="PC" class="" image="" compose="" compose_name="">
-      <position x="668.0" y="797.0" lat="47.57192145240362" lon="-122.12332309960311" alt="2.0"/>
+      <position x="1139.0" y="793.0" lat="47.57195781606055" lon="-122.11697650212079" alt="2.0"/>
       <services>
         <service name="DefaultRoute"/>
       </services>
@@ -95,6 +98,25 @@
       <position x="1027.0" y="244.0" lat="47.57694848842162" lon="-122.11848567179811" alt="2.0"/>
       <services>
         <service name="DHCPClient"/>
+      </services>
+    </device>
+    <device id="19" name="n19" icon="" canvas="1" type="router" class="" image="" compose="" compose_name="">
+      <position x="340.0" y="845.0" lat="47.57148508655102" lon="-122.12774281080098" alt="2.0"/>
+      <services>
+        <service name="NAT"/>
+        <service name="zebra"/>
+      </services>
+    </device>
+    <device id="21" name="n21" icon="" canvas="1" type="PC" class="" image="" compose="" compose_name="">
+      <position x="654.0" y="745.0" lat="47.57239417797421" lon="-122.12351174581278" alt="2.0"/>
+      <services>
+        <service name="DefaultRoute"/>
+      </services>
+    </device>
+    <device id="22" name="n22" icon="" canvas="1" type="PC" class="" image="" compose="" compose_name="">
+      <position x="661.0" y="917.0" lat="47.57083053095472" lon="-122.12341742270794" alt="2.0"/>
+      <services>
+        <service name="DefaultRoute"/>
       </services>
     </device>
   </devices>
@@ -201,7 +223,27 @@
     </link>
     <link node1="14" node2="18">
       <iface1 id="3" name="veth14.3.1"/>
-      <iface2 id="0" name="eth0"/>
+      <iface2 id="0" name="eth0" mac="00:00:00:aa:00:1c"/>
+      <options delay="0" bandwidth="0" loss="0.0" dup="0" jitter="0" unidirectional="0" buffer="0"/>
+    </link>
+    <link node1="7" node2="19">
+      <iface1 id="2" name="veth7.2.1"/>
+      <iface2 id="0" name="eth0" mac="00:00:00:aa:00:1d" ip4="172.16.168.1" ip4_mask="22"/>
+      <options delay="0" bandwidth="0" loss="0.0" dup="0" jitter="0" unidirectional="0" buffer="0"/>
+    </link>
+    <link node1="20" node2="19">
+      <iface1 id="0" name="veth20.0.1"/>
+      <iface2 id="1" name="eth1" mac="00:00:00:aa:00:1e" ip4="192.168.200.254" ip4_mask="24"/>
+      <options delay="0" bandwidth="0" loss="0.0" dup="0" jitter="0" unidirectional="0" buffer="0"/>
+    </link>
+    <link node1="20" node2="21">
+      <iface1 id="1" name="veth20.1.1"/>
+      <iface2 id="0" name="eth0" mac="00:00:00:aa:00:1f" ip4="192.168.200.20" ip4_mask="24"/>
+      <options delay="0" bandwidth="0" loss="0.0" dup="0" jitter="0" unidirectional="0" buffer="0"/>
+    </link>
+    <link node1="20" node2="22">
+      <iface1 id="2" name="veth20.2.1"/>
+      <iface2 id="0" name="eth0" mac="00:00:00:aa:00:20" ip4="192.168.200.21" ip4_mask="24"/>
       <options delay="0" bandwidth="0" loss="0.0" dup="0" jitter="0" unidirectional="0" buffer="0"/>
     </link>
   </links>
@@ -254,6 +296,9 @@ interface eth2
 
 interface eth3 
   ip address 172.16.171.254/22
+
+interface eth4
+  ip address 192.168.100.33/30
 
 
 ! A
@@ -455,6 +500,58 @@ subnet 172.16.175.128 netmask 255.255.255.128 {
         <template name="defaultroute.sh"><![CDATA[#!/bin/sh
 # auto-generated by DefaultRoute service
 ip route add default via 172.16.175.62]]></template>
+      </templates>
+    </service>
+    <service name="NAT" node="19">
+      <templates>
+        <template name="nat.sh"><![CDATA[#!/bin/sh
+# generated by security.py
+
+iptables -t nat -A POSTROUTING -o eth1 -j MASQUERADE
+
+iptables -A FORWARD -i eth1 -m state --state RELATED,ESTABLISHED -j ACCEPT
+
+iptables -A FORWARD -i eth1 -j DROP]]></template>
+      </templates>
+    </service>
+    <service name="zebra" node="19">
+      <templates>
+        <template name="/usr/local/etc/quagga/Quagga.conf"><![CDATA[!B
+
+interface eth0
+  ip address 172.16.168.1/22
+
+interface eth1 
+  ip address 192.168.200.254/24
+
+
+! A
+ip route 172.16.160.0/21 172.16.171.254
+
+! C
+ip route 172.16.172.0/23 172.16.171.254
+
+! D
+ip route 172.16.174.0/24 172.16.171.254
+ip route 172.16.175.0/26 172.16.171.254
+
+! E
+ip route 172.16.175.64/26 172.16.171.254
+ip route 172.16.175.128/25 172.16.171.254]]></template>
+      </templates>
+    </service>
+    <service name="DefaultRoute" node="21">
+      <templates>
+        <template name="defaultroute.sh"><![CDATA[#!/bin/sh
+# auto-generated by DefaultRoute service
+ip route add default via 192.168.200.254]]></template>
+      </templates>
+    </service>
+    <service name="DefaultRoute" node="22">
+      <templates>
+        <template name="defaultroute.sh"><![CDATA[#!/bin/sh
+# auto-generated by DefaultRoute service
+ip route add default via 192.168.200.254]]></template>
       </templates>
     </service>
   </service_configurations>
